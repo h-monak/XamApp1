@@ -3,6 +3,9 @@ using Xamarin.Forms;
 using XamApp1.Services;
 using XamApp1.Views;
 using Xamarin.Forms.Xaml;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace XamApp1
@@ -27,8 +30,12 @@ namespace XamApp1
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+            // Handle when your app starts
+            //AppCenter.Start("ios=b78111b3-910a-4e73-8ee9-f388496cc8ca;" +
+            //      "uwp={Your UWP App secret here};" +
+            //      "android={Your Android App secret here}",
+            //      typeof(Analytics), typeof(Crashes));
+        }
 
 		protected override void OnSleep ()
 		{
